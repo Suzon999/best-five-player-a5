@@ -1,31 +1,18 @@
+
 document.getElementById("calculated").addEventListener("click", function () {
-    const playerField = document.getElementById("per-player-field");
-    const playerFieldString = playerField.value;
-    const playerValue = parseFloat(playerFieldString);
-
-
+    const playerValue = getInputValueByID("per-player-field");
+    // add childern id 
     const playerlenth = document.getElementById("select-player").children.length;
-
     // player expence
     const playerExpenceElement = document.getElementById("player-expenses");
-    const playerExpenceString = playerExpenceElement.innerText;
-    const playerExpenceValue = parseFloat(playerExpenceString);
     const newPlayerExpance = playerValue * playerlenth;
     playerExpenceElement.innerText = newPlayerExpance;
 })
 
 document.getElementById("calculated-total").addEventListener('click', function () {
-    const playerExpenceElement = document.getElementById("player-expenses");
-    const playerExpenceString = playerExpenceElement.innerText;
-    const playerExpenceValue = parseFloat(playerExpenceString);
-
-    const managerExpenceElement = document.getElementById("manager-expenses");
-    const managerExpenceString = managerExpenceElement.value;
-    const managerExpenceValue = parseFloat(managerExpenceString);
-
-    const coachExpenceElement = document.getElementById("coach-expenses");
-    const coachExpenceString = coachExpenceElement.value;
-    const coachExpenceValue = parseFloat(coachExpenceString);
+    const playerExpenceValue = getInputElementByid("player-expenses");
+    const managerExpenceValue = getInputValueByID("manager-expenses");
+    const coachExpenceValue = getInputValueByID("coach-expenses");
 
     const totalCost = playerExpenceValue + managerExpenceValue + coachExpenceValue;
 
@@ -34,8 +21,6 @@ document.getElementById("calculated-total").addEventListener('click', function (
     const totalCostValue = parseFloat(totalCostString);
     const newTotal = totalCost + totalCostValue;
     totalCostElement.innerText = newTotal;
-
-
 })
 
 // button add to select-v
