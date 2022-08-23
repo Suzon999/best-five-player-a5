@@ -6,8 +6,12 @@
 
 .header-section {
     padding: 110px 0;
-    background-color: black;
+    background-color: rgb(11, 11, 11);
+}
 
+.banner-img {
+    height: 400px;
+    width: 500px;
 }
 
 .img {
@@ -32,7 +36,7 @@
 }
 
 .select-player {
-    height: 400px;
+    height: 450px;
 
     background-color: black;
 

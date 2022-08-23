@@ -56,6 +56,5 @@ function addToCard(event) {
     array.push(playerName);
     // console.log(array)
     displayName(array);
-    event.classList.add("disabled");
-
+    event.classList.add("disabled",);
 }
